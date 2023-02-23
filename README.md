@@ -73,14 +73,13 @@ If everything installs correctly, you should be good to run the script.
 
 
 ## Instructions
-1. Create a folder and title it “Work”
-2. Within the folder make another folder titled “Python script”
-3. Put the python code `main_improved.py` within the python script folder
-4. Within python script make a folder called “Segmented Videos”
-5. Download the sj_#### folders about 6 at a time into the segmented videos folder
-6. Open `main_improved.py` in python and run the code provided
-7. Let the program run
-8. Once completed, it will upload all the data for the movement coding into a txt file called “results” within the python script folder
-9. Open the results txt file and put the results into the movement coding google sheet for each sj ID
-10. Empty the Work folder and download new sj_#### folder 
-11. Repeat the process (the data will still be saved in the result txt file it will not erase every time you rerun the code)
+1. Inside the repository folder, create a new folder called `Segmented_Video` (MUST MATCH EXACTLY).
+5. Download up to 6 subject folders (`sj_####`) into the `Segmented_Video` folder.
+6. From terminal, go to repository folder. ex: `cd path/to/movement_detection`
+7. Start virtual environment with `source venv/bin/activate`
+8. Run script with `python3 main_improved.py`
+7. Let the program run, it will take as long as the videos are. You should be able to see the video playing in a popup window.
+8. Once completed, it will upload all the data for the movement coding into `results.txt` and `results.csv` within the `movement_detection` folder.
+9. The movement start times for each clip get logged inside their respective folders as a txt file.
+10. Once completed, delete the subject folders in `Segemented_Video` and download new sj_#### folders.
+11. Repeat the process (the data will still be saved in the `result.txt` and `results.csv` files. It will not erase every time you rerun the code)

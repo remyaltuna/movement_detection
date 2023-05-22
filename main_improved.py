@@ -20,6 +20,7 @@ if not csv_exists:
 
 file1 = open("results.txt", "a")  # append mode
 file1.write("Results \n")
+f1 = open("results.csv", "a")
 
 video_folder = os.path.join(os.getcwd(), "Segmented_Video")
 subject_dirs = os.listdir(video_folder)
@@ -38,6 +39,7 @@ for subject_dir in subject_dirs:
                 name_of_clip = vid.split('.')[0]
                 name_of_time_file = f"movement_times_{subject_dir}_{name_of_clip}.txt"
 
+                print(full_path)
                 time_file_path = os.path.join(subject_dir_path, name_of_time_file)
                 file_time = open(time_file_path, "w")  # append mode
 
@@ -125,10 +127,14 @@ for subject_dir in subject_dirs:
                         clip_num = clip_num + c
                 clip_num = int(clip_num)
 
+
+
                 # Magnitude
                 subject_row[clip_num] = magnitude
                 # Total Time
                 subject_row[clip_num + 6] = totaltime
+
+
 
                 file1.write("----------------------------------------\n")
                 file1.write(f"Video path: {str(full_path)}\n")
@@ -138,6 +144,9 @@ for subject_dir in subject_dirs:
                 file1.write(f"Total Magnitude of Movement: {str(magnitude)}\n")
                 print(f"Total Magnitude of Movement: {str(magnitude)}\n")
                 file1.write("----------------------------------------\n")
+
+
+
                 capture.release()
                 out.release()
 
@@ -146,3 +155,4 @@ for subject_dir in subject_dirs:
 
 file1.close()
 f.close()
+f1.close()

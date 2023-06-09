@@ -25,6 +25,10 @@ Now we have to copy this ssh key into your github account.
    ```
    Copy paste this whole line into the github `SSH and GPG keys` website under `Key`. Also give this key a title like `Macbook` and leave key type as `Authentication key`. Click `Add SSH Key`
    
+Navigate to where you want to store the repo
+```bash
+cd ~
+```
 Now you can clone this repository in your local machine. From terminal type:
 ```bash
 git clone git@github.com:remyaltuna/movement_detection.git
